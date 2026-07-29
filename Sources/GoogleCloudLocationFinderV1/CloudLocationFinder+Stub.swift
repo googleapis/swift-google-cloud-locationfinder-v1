@@ -26,15 +26,15 @@ extension Clients {
   protocol CloudLocationFinderStub {
     func listCloudLocations(
       request: ListCloudLocationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLocationfinderV1.ListCloudLocationsResponse
+    ) async throws -> GoogleCloudLocationFinderV1.ListCloudLocationsResponse
 
     func getCloudLocation(
       request: GetCloudLocationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLocationfinderV1.CloudLocation
+    ) async throws -> GoogleCloudLocationFinderV1.CloudLocation
 
     func searchCloudLocations(
       request: SearchCloudLocationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLocationfinderV1.SearchCloudLocationsResponse
+    ) async throws -> GoogleCloudLocationFinderV1.SearchCloudLocationsResponse
 
     func listLocations(
       request: GoogleCloudLocation.ListLocationsRequest, options: GoogleCloudGax.RequestOptions
@@ -55,7 +55,7 @@ extension Clients {
 
     public func listCloudLocations(
       request: ListCloudLocationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLocationfinderV1.ListCloudLocationsResponse {
+    ) async throws -> GoogleCloudLocationFinderV1.ListCloudLocationsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -74,12 +74,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudLocationfinderV1.ListCloudLocationsResponse.self, from: data)
+        GoogleCloudLocationFinderV1.ListCloudLocationsResponse.self, from: data)
     }
 
     public func getCloudLocation(
       request: GetCloudLocationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLocationfinderV1.CloudLocation {
+    ) async throws -> GoogleCloudLocationFinderV1.CloudLocation {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -94,12 +94,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudLocationfinderV1.CloudLocation.self, from: data)
+        GoogleCloudLocationFinderV1.CloudLocation.self, from: data)
     }
 
     public func searchCloudLocations(
       request: SearchCloudLocationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLocationfinderV1.SearchCloudLocationsResponse {
+    ) async throws -> GoogleCloudLocationFinderV1.SearchCloudLocationsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -120,7 +120,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudLocationfinderV1.SearchCloudLocationsResponse.self, from: data)
+        GoogleCloudLocationFinderV1.SearchCloudLocationsResponse.self, from: data)
     }
 
     public func listLocations(

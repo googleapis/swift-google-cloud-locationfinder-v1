@@ -51,14 +51,14 @@ extension Clients {
 
     public func listCloudLocations(
       request: ListCloudLocationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLocationfinderV1.ListCloudLocationsResponse {
+    ) async throws -> GoogleCloudLocationFinderV1.ListCloudLocationsResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListCloudLocationsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudLocationfinderV1.ListCloudLocationsResponse
+            -> GoogleCloudLocationFinderV1.ListCloudLocationsResponse
           in
           return try await self.inner.listCloudLocations(request: r, options: o)
         })
@@ -66,14 +66,14 @@ extension Clients {
 
     public func getCloudLocation(
       request: GetCloudLocationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLocationfinderV1.CloudLocation {
+    ) async throws -> GoogleCloudLocationFinderV1.CloudLocation {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: GetCloudLocationRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudLocationfinderV1.CloudLocation
+            -> GoogleCloudLocationFinderV1.CloudLocation
           in
           return try await self.inner.getCloudLocation(request: r, options: o)
         })
@@ -81,14 +81,14 @@ extension Clients {
 
     public func searchCloudLocations(
       request: SearchCloudLocationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLocationfinderV1.SearchCloudLocationsResponse {
+    ) async throws -> GoogleCloudLocationFinderV1.SearchCloudLocationsResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: SearchCloudLocationsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudLocationfinderV1.SearchCloudLocationsResponse
+            -> GoogleCloudLocationFinderV1.SearchCloudLocationsResponse
           in
           return try await self.inner.searchCloudLocations(request: r, options: o)
         })
